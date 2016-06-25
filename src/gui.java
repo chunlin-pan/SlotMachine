@@ -128,7 +128,7 @@ public class gui extends JFrame {
 	    					    //當初現777時顯示中獎	    						
 	    					    if(math1==math2&&math2==math3&&math3==0)
 	    						{
-	    							JOptionPane.showMessageDialog(gui, "中獎拉!!");
+	    							JOptionPane.showMessageDialog(gui, "<html><span style='font-size:100px'>"+"中獎拉!!"+"</span></html>");
 	    							money=money+100;
 	    							text1.setText("<html><span style='font-size:100px'>"+"剩餘籌碼:"+money+"</span></html>");
 	    						}
