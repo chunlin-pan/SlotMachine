@@ -1,4 +1,4 @@
-ï»¿import java.awt.Component;
+import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.Icon;
@@ -20,7 +20,7 @@ public class gui extends JFrame {
 	private int math3;
 	private JLabel text1;
 	private  Integer money;
-	/**ç”¢ç”Ÿä¸‰å€‹äº‚æ•¸
+	/**²£¥Í¤T­Ó¶Ã¼Æ
 	 * 
 	 */
 	public void setPicture(){
@@ -57,24 +57,24 @@ public class gui extends JFrame {
 	Icon casinoADGIF=new ImageIcon((getClass().getResource("image/giphy.gif")));
 	ImageIcon jframeicon=new ImageIcon((getClass().getResource("image/jframe_title.jpg")));
 	/**
-	 * ç”¢ç”ŸGUI
+	 * ²£¥ÍGUI
 	 */
 	public gui(){
 		
-		super("æ‹‰éœ¸");
+		super("©ÔÅQ");
 		setLayout(null);
 		
-		//è¨­å®šJFrameIcon
+		//³]©wJFrameIcon
 		super.setIconImage(jframeicon.getImage());
 	    
-		//é¡¯ç¤ºåˆå§‹ç±Œç¢¼
+		//Åã¥Üªì©lÄw½X
 		money=50;
 		text1=new JLabel();
 		text1.setBounds(170, -35, 1000, 170);
-		text1.setText("<html><span style='font-size:100px'>"+"å‰©é¤˜ç±Œç¢¼:"+money+"</span></html>");
+		text1.setText("<html><span style='font-size:100px'>"+"³Ñ¾lÄw½X:"+money+"</span></html>");
 		add(text1);
 		
-		//é¡¯ç¤ºä¸‹æ–¹è³­å ´GIF
+		//Åã¥Ü¤U¤è½ä³õGIF
 		casinoAD1 =new JLabel();
 		casinoAD1.setIcon(casinoADGIF);
 		casinoAD1.setBounds(175, 500, 720, 360);
@@ -90,7 +90,7 @@ public class gui extends JFrame {
 		casinoAD3.setBounds(1135, 500, 720, 360);
 		add(casinoAD3);
 		
-		//ä¸€é–‹å§‹é¡¯é¡¯ç¤ºä¸‰å¼µ7
+		//¤@¶}©lÅãÅã¥Ü¤T±i7
 		picture1=new JLabel();
 		picture1.setIcon(seven);
 		picture1.setBounds(100, 100, 400, 400);
@@ -106,7 +106,7 @@ public class gui extends JFrame {
 		picture3.setBounds(940, 100, 400, 400);
 		add(picture3)
 		;
-		//æ‹‰éœ¸å•“å‹•çš„æŒ‰éˆ•
+		//©ÔÅQ?°Êªº«ö¶s
 		Icon start=new ImageIcon((getClass().getResource("image/start.png")));
 		start_button=new JButton(null,start);		
 		start_button.setBounds(1460,100,400,400);
@@ -119,49 +119,28 @@ public class gui extends JFrame {
 		    			}catch (InterruptedException e1){}
 	                    SwingUtilities.invokeLater(new Runnable(){
 	                    	public void run(){
-	                    		// æŒ‰ä¸‹æŒ‰éˆ•ä¹‹å¾ŒåŸ·è¡Œçš„å‹•ä½œ
+	                    		// «ö¤U«ö¶s¤§«á°õ¦æªº°Ê§@
 				    					    setPicture();
 				    					    get_three_image();
 	    					    System.out.println(math1+","+math2+","+math3);
 	    					    money=money-5;
-	    					    text1.setText("<html><span style='font-size:100px'>"+"å‰©é¤˜ç±Œç¢¼:"+money+"</span></html>");
-	    					    //ç•¶åˆç¾777æ™‚é¡¯ç¤ºä¸­ç
+	    					    text1.setText("<html><span style='font-size:100px'>"+"³Ñ¾lÄw½X:"+money+"</span></html>");
+	    					    //·íªì²{777®ÉÅã¥Ü¤¤¼ú
 	    						if(math1==math2&&math2==math3&&math3==0)
 	    						{
-	    							JOptionPane.showMessageDialog(gui, "ä¸­çæ‹‰!!");
+	    							JOptionPane.showMessageDialog(gui, "¤¤¼ú©Ô!!");
 	    							money=money+100;
-	    							text1.setText("<html><span style='font-size:100px'>"+"å‰©é¤˜ç±Œç¢¼:"+money+"</span></html>");
+	    							text1.setText("<html><span style='font-size:100px'>"+"³Ñ¾lÄw½X:"+money+"</span></html>");
 	    						}
 	    						if(money<=0)
 	    						{
-	    							JOptionPane.showMessageDialog(gui,"<html><span style='font-size:50px'>"+ "æ²’éŒ¢å›‰!  ç‚ºæ‚¨é‡æ–°å„²å€¼50å…ƒ"+"</span></html>");
+	    							JOptionPane.showMessageDialog(gui,"<html><span style='font-size:50px'>"+ "¨S¿úÅo!  ¬°±z­«·sÀx­È50¤¸"+"</span></html>");
 	    							money=50;	
-	    							text1.setText("<html><span style='font-size:100px'>"+"å‰©é¤˜ç±Œç¢¼:"+money+"</span></html>");
+	    							text1.setText("<html><span style='font-size:100px'>"+"³Ñ¾lÄw½X:"+money+"</span></html>");
 	    						}
 	                    	}
 	                    });
-	                    	
 		    		}
-		    		/*public void run(){
-			    		// æŒ‰ä¸‹æŒ‰éˆ•ä¹‹å¾ŒåŸ·è¡Œçš„å‹•ä½œ
-					    setPicture();
-					    get_three_image();
-					    System.out.println(math1+","+math2+","+math3);
-					    money=money-10;
-					    //ç•¶åˆç¾777æ™‚é¡¯ç¤ºä¸­ç
-						if(math1==math2&&math2==math3&&math3==0)
-						{
-							JOptionPane.showMessageDialog(gui, "ä¸­çæ‹‰!!");
-							money=money+100;
-						}
-						if(money<=0)
-						{
-							text1.setText("<html><span style='font-size:100px'>"+"å‰©é¤˜ç±Œç¢¼:"+money+"</span></html>");
-							JOptionPane.showMessageDialog(gui, "æ²’éŒ¢å›‰!  ç‚ºæ‚¨é‡æ–°å„²å€¼50å…ƒ");
-							money=50;					
-						}
-						
-		    		}*/	
 		    	}).start();
 		    	
 		    }
@@ -170,10 +149,10 @@ public class gui extends JFrame {
 	}
 	
 	/**
-	 * ç”±math1,math2,math3 æ±ºå®šå‡ºä¸‰å¼µåœ–
+	 * ¥Ñmath1,math2,math3 ¨M©w¥X¤T±i¹Ï
 	 */
 	void get_three_image(){
-		//æ±ºå®šç¬¬ä¸€å¼µåœ–é¡¯ç¤ºå“ªå€‹åœ–
+		//¨M©w²Ä¤@±i¹ÏÅã¥Ü­ş­Ó¹Ï
 				switch(getpicture1()){
 				case 0:
 					picture1.setIcon(seven);
@@ -189,7 +168,7 @@ public class gui extends JFrame {
 					break;
 				};
 				
-				//æ±ºå®šç¬¬äºŒå¼µåœ–é¡¯ç¤ºå“ªå€‹åœ–
+				//¨M©w²Ä¤G±i¹ÏÅã¥Ü­ş­Ó¹Ï
 				switch(getpicture2()){
 				case 0:
 					picture2.setIcon(seven);
@@ -205,7 +184,7 @@ public class gui extends JFrame {
 					break;
 				};
 				
-				//æ±ºå®šç¬¬å‚å¼µåœ–é¡¯ç¤ºå“ªå€‹åœ–
+				//¨M©w²Ä?±i¹ÏÅã¥Ü­ş­Ó¹Ï
 				switch(getpicture3()){
 				case 0:
 					picture3.setIcon(seven);
@@ -222,11 +201,5 @@ public class gui extends JFrame {
 				}
 				
 	}
-/*	private class buttonHandler implements ActionListener{
-		public void actionPerformed(ActionEvent event){
-			slot_machine.setPicture();
-			get_three_image();
-		}
-	}*/
 
 }
